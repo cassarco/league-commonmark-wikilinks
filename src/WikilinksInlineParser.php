@@ -40,13 +40,15 @@ class WikilinksInlineParser implements InlineParserInterface, ConfigurationAware
 
     private function doesNotPassValidation(string $text, string $line): bool
     {
-        return !$text ||
+        return
+            !$text ||
             str_contains($text, '[') ||
             str_contains($text, ']') ||
-            substr_count($line, '[') > 2 ||
-            substr_count($line, ']') > 2 ||
-            substr_count($line, '#') > 1 ||
-            substr_count($line, '|') > 1;
+            preg_match('/\[{3,}/', $line, $matches) ||
+            preg_match('/]{3,}/', $line, $matches) ||
+            substr_count($text, '#') > 1 ||
+            substr_count($text, '|') > 1
+            ;
     }
 
     public function setConfiguration(ConfigurationInterface $configuration): void

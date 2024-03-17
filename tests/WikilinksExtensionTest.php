@@ -70,7 +70,7 @@ it('does nothing if it finds more than two left angle brackets', function () {
     expect(convert($markdown))->toEqual($html);
 });
 
-it('can handle more than two right angle brackets', function () {
+it('does nothing if it finds more than two right angle bracket', function () {
     $markdown = '[[Hello World]]]]';
     $html = '<p>[[Hello World]]]]</p>';
 
