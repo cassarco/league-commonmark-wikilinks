@@ -25,7 +25,7 @@ class WikilinksInlineParser implements InlineParserInterface, ConfigurationAware
 
         $line = $cursor->getLine();
 
-        if ($this->doesNotPassValidation($text, $line)) {
+        if ($this->validationFails($text, $line)) {
             return false;
         }
 
@@ -38,21 +38,37 @@ class WikilinksInlineParser implements InlineParserInterface, ConfigurationAware
         return true;
     }
 
-    private function doesNotPassValidation(string $text, string $line): bool
+    private function validationFails(string $text, string $line): bool
     {
         return
-            !$text ||
-            str_contains($text, '[') ||
-            str_contains($text, ']') ||
-            preg_match('/\[{3,}/', $line, $matches) ||
-            preg_match('/]{3,}/', $line, $matches) ||
-            substr_count($text, '#') > 1 ||
-            substr_count($text, '|') > 1
-            ;
+            $this->thereIsNo($text) ||
+            $this->contains(character: '[', in: $text) ||
+            $this->contains(character: ']', in: $text) ||
+            $this->containsMoreThanTwoConsecutive(character: '#', in: $text) ||
+            $this->containsMoreThanTwoConsecutive(character: '|', in: $text) ||
+            $this->containsMoreThanTwoConsecutive(character: '[', in: $line) ||
+            $this->containsMoreThanTwoConsecutive(character: ']', in: $line);
     }
 
     public function setConfiguration(ConfigurationInterface $configuration): void
     {
         $this->config = $configuration;
+    }
+
+    private function thereIsNo(string $text): bool
+    {
+        return !$text;
+    }
+
+    private function contains(string $character, string $in): bool
+    {
+        return str_contains($in, $character);
+    }
+
+    private function containsMoreThanTwoConsecutive(string $character, string $in): int|false
+    {
+        $pattern = '/[' . preg_quote($character, '/') . ']{3,}/';
+
+        return preg_match($pattern, $in);
     }
 }

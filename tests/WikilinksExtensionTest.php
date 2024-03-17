@@ -130,8 +130,8 @@ it('can handle hash links with looks-like text', function () {
 });
 
 it('does nothing if more than one hash is found', function () {
-    $markdown = '[[Hello World##Top|Welcome]]';
-    $html = '<p>[[Hello World##Top|Welcome]]</p>';
+    $markdown = '[[Hello World###Top|Welcome]]';
+    $html = '<p>[[Hello World###Top|Welcome]]</p>';
 
     expect(convert($markdown))->toEqual($html);
 });
