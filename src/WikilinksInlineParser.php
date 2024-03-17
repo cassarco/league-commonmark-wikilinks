@@ -65,10 +65,10 @@ class WikilinksInlineParser implements InlineParserInterface, ConfigurationAware
         return str_contains($in, $character);
     }
 
-    private function containsMoreThanTwoConsecutive(string $character, string $in): int|false
+    private function containsMoreThanTwoConsecutive(string $character, string $in): bool
     {
-        $pattern = '/[' . preg_quote($character, '/') . ']{3,}/';
+        $pattern = '/['.preg_quote($character, '/').']{3,}/';
 
-        return preg_match($pattern, $in);
+        return !!preg_match($pattern, $in);
     }
 }
