@@ -3,6 +3,8 @@
     "description": "An extension that enables wikilinks parsing in league/commonmark.",
     "keywords": [
         "cassarco",
+        "wikilinks",
+        "markdown",
         "league-commonmark-wikilinks"
     ],
     "homepage": "https://github.com/cassarco/league-commonmark-wikilinks",
