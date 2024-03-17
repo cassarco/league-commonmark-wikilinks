@@ -40,7 +40,7 @@ it('can convert an empty wikilink to an html link', function () {
     expect(convert($markdown))->toEqual($html);
 });
 
-it('can does not convert if two surrounding square brackets are not found', function () {
+it('does not convert if two surrounding square brackets are not found', function () {
 
     $markdown = '[Hello World]';
     $html = '<p>[Hello World]</p>';
