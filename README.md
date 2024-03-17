@@ -28,6 +28,8 @@ $environment->addExtension(new WikiLinksExtension());
 $markdown = "[[Hello World]]";
 
 $this->content = (new MarkdownConverter($environment))->convert($markdown);
+
+// <p><a href="hello-world" title="Hello World">Hello World</a></p>
 ```
 
 ## Testing
