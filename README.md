@@ -1,18 +1,10 @@
-# An extension that enables wikilinks parsing in league/commonmark.
+# league-commonmark-wikilinks
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/cassarco/league-commonmark-wikilinks.svg?style=flat-square)](https://packagist.org/packages/cassarco/league-commonmark-wikilinks)
 [![Tests](https://img.shields.io/github/actions/workflow/status/cassarco/league-commonmark-wikilinks/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/cassarco/league-commonmark-wikilinks/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/cassarco/league-commonmark-wikilinks.svg?style=flat-square)](https://packagist.org/packages/cassarco/league-commonmark-wikilinks)
 
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/league-commonmark-wikilinks.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/league-commonmark-wikilinks)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+An extension that enables wikilinks parsing in league/commonmark.
 
 ## Installation
 
@@ -25,8 +17,17 @@ composer require cassarco/league-commonmark-wikilinks
 ## Usage
 
 ```php
-$skeleton = new Cassarco\LeagueCommonmarkWikilinks();
-echo $skeleton->echoPhrase('Hello, Cassarco!');
+use League\CommonMark\MarkdownConverter;
+use Cassarco\LeagueCommonmarkWikilinks\WikilinksExtension;
+
+$environment = new Environment();
+
+$environment->addExtension(new CommonMarkCoreExtension());
+$environment->addExtension(new WikiLinksExtension());
+
+$markdown = "[[Hello World]]";
+
+$this->content = (new MarkdownConverter($environment))->convert($markdown);
 ```
 
 ## Testing
@@ -42,10 +43,6 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 ## Contributing
 
 Please see [CONTRIBUTING](https://github.com/spatie/.github/blob/main/CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
 
 ## Credits
 
