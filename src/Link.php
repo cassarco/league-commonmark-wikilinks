@@ -7,9 +7,13 @@ use League\Config\ConfigurationInterface;
 class Link
 {
     protected string $title = '';
+
     protected string $url = '';
+
     protected array $split;
+
     protected ConfigurationInterface $config;
+
     private string $text;
 
     public static function new(): static
@@ -17,7 +21,8 @@ class Link
         return new static;
     }
 
-    public function from(string $text): \League\CommonMark\Extension\CommonMark\Node\Inline\Link {
+    public function from(string $text): \League\CommonMark\Extension\CommonMark\Node\Inline\Link
+    {
         $this->text = $text;
 
         return $this
@@ -45,7 +50,7 @@ class Link
 
     protected function split(): static
     {
-        $this->split = preg_split("/[#|]/", $this->text);
+        $this->split = preg_split('/[#|]/', $this->text);
 
         return $this;
     }
@@ -124,7 +129,7 @@ class Link
 
     protected function addPrefix(): static
     {
-        if($this->config->exists('wikilinks.prefix')) {
+        if ($this->config->exists('wikilinks.prefix')) {
             $this->url = $this->config->get('wikilinks.prefix').$this->url;
         }
 

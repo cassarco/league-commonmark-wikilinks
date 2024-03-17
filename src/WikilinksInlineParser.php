@@ -8,7 +8,7 @@ use League\CommonMark\Parser\InlineParserContext;
 use League\Config\ConfigurationAwareInterface;
 use League\Config\ConfigurationInterface;
 
-class WikilinksInlineParser implements InlineParserInterface, ConfigurationAwareInterface
+class WikilinksInlineParser implements ConfigurationAwareInterface, InlineParserInterface
 {
     protected ConfigurationInterface $config;
 
@@ -57,7 +57,7 @@ class WikilinksInlineParser implements InlineParserInterface, ConfigurationAware
 
     private function thereIsNo(string $text): bool
     {
-        return !$text;
+        return ! $text;
     }
 
     private function contains(string $character, string $in): bool
@@ -69,6 +69,6 @@ class WikilinksInlineParser implements InlineParserInterface, ConfigurationAware
     {
         $pattern = '/['.preg_quote($character, '/').']{3,}/';
 
-        return !!preg_match($pattern, $in);
+        return (bool) preg_match($pattern, $in);
     }
 }
