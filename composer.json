@@ -1,16 +1,16 @@
 {
-    "name": "carlcassar/league-commonmark-wikilinks",
+    "name": "cassarco/league-commonmark-wikilinks",
     "description": "An extension that enables wikilinks parsing in league/commonmark.",
     "keywords": [
-        "carlcassar",
+        "cassarco",
         "league-commonmark-wikilinks"
     ],
-    "homepage": "https://github.com/carlcassar/league-commonmark-wikilinks",
+    "homepage": "https://github.com/cassarco/league-commonmark-wikilinks",
     "license": "MIT",
     "authors": [
         {
-            "name": "Carl Cassar",
-            "email": "code@carlcassar.com",
+            "name": "Cassar & Co",
+            "email": "mail@cassar.co",
             "role": "Developer"
         }
     ],
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Cassar\\LeagueCommonmarkWikilinks\\": "src"
+            "Cassarco\\LeagueCommonmarkWikilinks\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Cassar\\LeagueCommonmarkWikilinks\\Tests\\": "tests"
+            "Cassarco\\LeagueCommonmarkWikilinks\\Tests\\": "tests"
         }
     },
     "scripts": {

@@ -1,8 +1,8 @@
 # An extension that enables wikilinks parsing in league/commonmark.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/carlcassar/league-commonmark-wikilinks.svg?style=flat-square)](https://packagist.org/packages/carlcassar/league-commonmark-wikilinks)
-[![Tests](https://img.shields.io/github/actions/workflow/status/carlcassar/league-commonmark-wikilinks/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/carlcassar/league-commonmark-wikilinks/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/carlcassar/league-commonmark-wikilinks.svg?style=flat-square)](https://packagist.org/packages/carlcassar/league-commonmark-wikilinks)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/cassarco/league-commonmark-wikilinks.svg?style=flat-square)](https://packagist.org/packages/cassarco/league-commonmark-wikilinks)
+[![Tests](https://img.shields.io/github/actions/workflow/status/cassarco/league-commonmark-wikilinks/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/cassarco/league-commonmark-wikilinks/actions/workflows/run-tests.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/cassarco/league-commonmark-wikilinks.svg?style=flat-square)](https://packagist.org/packages/cassarco/league-commonmark-wikilinks)
 
 This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
 
@@ -19,14 +19,14 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 You can install the package via composer:
 
 ```bash
-composer require carlcassar/league-commonmark-wikilinks
+composer require cassarco/league-commonmark-wikilinks
 ```
 
 ## Usage
 
 ```php
-$skeleton = new Cassar\LeagueCommonmarkWikilinks();
-echo $skeleton->echoPhrase('Hello, Cassar!');
+$skeleton = new Cassarco\LeagueCommonmarkWikilinks();
+echo $skeleton->echoPhrase('Hello, Cassarco!');
 ```
 
 ## Testing
@@ -49,7 +49,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Carl Cassar](https://github.com/carlcassar)
+- [Cassar & Co](https://github.com/cassarco)
 - [All Contributors](../../contributors)
 
 ## License

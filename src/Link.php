@@ -1,6 +1,6 @@
 <?php
 
-namespace Cassar\LeagueCommonmarkWikilinks;
+namespace Cassarco\LeagueCommonmarkWikilinks;
 
 use League\Config\ConfigurationInterface;
 

@@ -2,7 +2,7 @@
 
 /** @noinspection HtmlUnknownTarget */
 
-use Cassar\LeagueCommonmarkWikilinks\WikilinksExtension;
+use Cassarco\LeagueCommonmarkWikilinks\WikilinksExtension;
 use League\CommonMark\Environment\Environment;
 use League\CommonMark\Exception\CommonMarkException;
 use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
