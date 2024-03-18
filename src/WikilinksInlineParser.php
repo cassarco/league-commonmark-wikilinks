@@ -2,11 +2,11 @@
 
 namespace Cassarco\LeagueCommonmarkWikilinks;
 
-use League\CommonMark\Parser\Inline\InlineParserInterface;
-use League\CommonMark\Parser\Inline\InlineParserMatch;
-use League\CommonMark\Parser\InlineParserContext;
-use League\Config\ConfigurationAwareInterface;
 use League\Config\ConfigurationInterface;
+use League\Config\ConfigurationAwareInterface;
+use League\CommonMark\Parser\InlineParserContext;
+use League\CommonMark\Parser\Inline\InlineParserMatch;
+use League\CommonMark\Parser\Inline\InlineParserInterface;
 
 class WikilinksInlineParser implements ConfigurationAwareInterface, InlineParserInterface
 {

@@ -6,15 +6,15 @@ use League\Config\ConfigurationInterface;
 
 class Link
 {
-    protected string $title = '';
-
-    protected string $url = '';
+    private string $text;
 
     protected array $split;
 
-    protected ConfigurationInterface $config;
+    protected string $url = '';
 
-    private string $text;
+    protected string $title = '';
+
+    protected ConfigurationInterface $config;
 
     public static function new(): static
     {
