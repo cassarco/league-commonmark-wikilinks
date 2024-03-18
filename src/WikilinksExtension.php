@@ -2,10 +2,10 @@
 
 namespace Cassarco\LeagueCommonmarkWikilinks;
 
-use Nette\Schema\Expect;
-use League\Config\ConfigurationBuilderInterface;
 use League\CommonMark\Environment\EnvironmentBuilderInterface;
 use League\CommonMark\Extension\ConfigurableExtensionInterface;
+use League\Config\ConfigurationBuilderInterface;
+use Nette\Schema\Expect;
 
 class WikilinksExtension implements ConfigurableExtensionInterface
 {

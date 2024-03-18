@@ -2,11 +2,11 @@
 
 /** @noinspection HtmlUnknownTarget */
 
-use League\CommonMark\MarkdownConverter;
+use Cassarco\LeagueCommonmarkWikilinks\WikilinksExtension;
 use League\CommonMark\Environment\Environment;
 use League\CommonMark\Exception\CommonMarkException;
-use Cassarco\LeagueCommonmarkWikilinks\WikilinksExtension;
 use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
+use League\CommonMark\MarkdownConverter;
 
 function convert(string $markdown, array $options = []): string
 {
