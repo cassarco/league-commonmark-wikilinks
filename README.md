@@ -4,7 +4,7 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/cassarco/league-commonmark-wikilinks/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/cassarco/league-commonmark-wikilinks/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/cassarco/league-commonmark-wikilinks.svg?style=flat-square)](https://packagist.org/packages/cassarco/league-commonmark-wikilinks)
 
-An extension for league-commonmark that lets you use wikilinks in your markdown files. These will be converted to html as you have come to expect from other apps that support Wikilinks such as Wikipedia and Obsidian.
+An extension for league-commonmark that lets you use Wikilinks in your markdown files. These will be converted to html as you have come to expect from other apps that support Wikilinks such as Wikipedia and Obsidian.
 
 ## Installation
 
@@ -56,7 +56,7 @@ $markdown = '[[Hello World|Welcome]]';
 
 ### Support for Hash Links
 
-You can optionally include hash links by adding a `#` followed by the hash link text to the end of the wikilink.
+You can optionally include hash links by adding a `#` followed by the hash link text to the end of the Wikilink.
 
 ```php
 $markdown = '[[Hello World#Top]]';
