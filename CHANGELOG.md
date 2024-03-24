@@ -2,6 +2,10 @@
 
 All notable changes to `league-commonmark-wikilinks` will be documented in this file.
 
+## v1.0.2 - 2024-03-24
+
+Updated contributing and security sections of the README.md.
+
 ## v1.0.1 - 2024-03-24
 
 Resolved an issue with the conversion of  anchor hash links.
