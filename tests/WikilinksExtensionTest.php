@@ -73,6 +73,15 @@ it('can handle hash links with looks-like text', function () {
     expect(convert($markdown))->toEqual($html);
 });
 
+it('can handle hash anchor links', function () {
+    $markdown = '[[#Hello World]]';
+
+    /** @noinspection HtmlUnknownAnchorTarget */
+    $html = '<p><a href="#hello-world" title="Hello World">Hello World</a></p>';
+
+    expect(convert($markdown))->toEqual($html);
+});
+
 it('has a prefix configuration option that prepends a prefix to the url', function () {
     $markdown = '[[Hello World#Top|Welcome]]';
     $html = '<p><a href="articles/hello-world#top" title="Welcome">Welcome</a></p>';

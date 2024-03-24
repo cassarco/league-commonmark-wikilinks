@@ -118,7 +118,11 @@ class Link
     protected function processHashLink(): void
     {
         $this->url = $this->slugFrom($this->split[0]).'#'.$this->slugFrom($this->split[1]);
-        $this->title = $this->split[0].' > '.$this->split[1];
+
+        $this->title =
+            empty($this->split[0])
+                ? $this->split[1]
+                : $this->split[0].' > '.$this->split[1];
     }
 
     protected function processAliasedHashLink(): void
