@@ -114,10 +114,15 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/spatie/.github/blob/main/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+
+## Security Vulnerabilities
+
+If you find a bug  that impacts the security of this package please send an email to security@cassar.co instead of using the issue tracker.
 
 ## Credits
 
+- [Carl Cassar](https://carlcassar.com)
 - [Cassar & Co](https://github.com/cassarco)
 - [All Contributors](../../contributors)
 
